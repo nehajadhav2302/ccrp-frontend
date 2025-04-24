@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Matching Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>🎯 Quiz Game</h1>
+    
+    <div id="instructions">
+        <h2>Welcome to the Odd One Out Game!</h2>
+        <p>💡 You have <b>120 seconds</b> to answer as many questions as possible.</p>
+        <p>✅ Pick the <b>Odd One Out</b> from the given options.</p>
+        <p>⏳ The timer runs continuously. Try to answer quickly!</p>
+        <div class="button-container">
+            <button id="start-button">Start Game</button>
+            <button id="quit-button-top">Quit Game</button>
+        </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <h2>Pick the Odd One Out</h2>
+        <p id="timer">⏳ Time Left: 120s</p>
+        <div class="question">
+            <p id="question-text"></p>
+        </div>
+        <div id="options-container"></div>
+        <p id="message"></p>
+        <div class="button-container">
+            <button id="next-button" style="display: none;">Next Question</button>
+            <button id="quit-button">Quit Game</button>
+        </div>
+    </div>
+
+    <div id="score-display" style="display: none;">
+        <h2>🎉 Game Over! Your Score: <span id="final-score"></span></h2>
+        <div class="button-container">
+            <button id="restart-button">Restart Game</button>
+            <button id="quit-final-button">Quit</button>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="correct-sound" src="../../../../audio/correct.wav"></audio>
+    <audio id="wrong-sound" src="../../../../audio/incorrect.wav"></audio>
+    <audio id="timer-sound" src="../../../../audio/timeup.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

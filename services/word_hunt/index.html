@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Hunt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔎 Word Hunt</h1>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>📚 How to Play:</h3>
+            <p>📝 <b>Objective:</b> Find all the hidden words in the grid.</p>
+            <p>➡️ Words can be placed <b>horizontally, vertically, or diagonally</b>.</p>
+            <p>👆 Click on the <b>first and last letter</b> of the word to highlight it.</p>
+            <p>⏱️ You have <b>300 seconds</b> to find all the words.</p>
+            <p>🔄 Click "Restart Game" to play again.</p>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer">
+            ⏱️ Time Remaining: <span id="timer">300</span> seconds
+        </div>
+
+        <!-- Score -->
+        <div id="score-display"></div>
+
+        <!-- Game Board -->
+        <div id="game-container">
+            <div id="game-board"></div>
+        </div>
+
+        <!-- Word List -->
+        <div class="word-list">
+            <h3>Find These Words:</h3>
+            <ul id="word-list"></ul>
+        </div>
+
+        <!-- Buttons -->
+        <button id="start-btn">▶️ Start Game</button>
+        <button id="restart-btn" style="display: none;">🔄 Restart Game</button>
+        <button id="quit-btn" style="display: none;">🚪 Quit Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

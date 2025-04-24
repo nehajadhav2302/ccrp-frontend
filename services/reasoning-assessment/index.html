@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Formation Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="game-title">Sentence Builder</h1> <!-- Title outside the box -->
+
+    <div class="container">
+        <!-- Instructions (Hidden after game starts) -->
+        <div id="instructions">
+            <h2 class="center-text">Instructions:</h2>
+            <ul class="left-align">
+                <li>You have <strong>180 seconds</strong> to complete the game.</li>
+                <li>Click words in the correct order to form a sentence.</li>
+                <li>Click "Reset" to clear your selection.</li>
+                <li>Click "Submit" to check your answer.</li>
+                <li>Your final score will be displayed at the end.</li>
+            </ul>
+            <button id="startButton">Start Game</button>
+            <button id="quitButton" >Quit</button>
+        </div>
+
+        <!-- Game Area (Hidden initially) -->
+        <div id="gameArea" class="hidden">
+            <div class="timer">⏳ Time Left: <span id="timer">180</span> sec</div>
+            <div class="score">⭐ Score: <span id="score">0</span></div>
+            
+            <div class="question-section">
+                <p id="question"></p>
+            </div>
+
+            <div class="options-section" id="options"></div>
+
+            <div class="answer-section">
+                <p><strong>Your Answer:</strong> <span id="userAnswer"></span></p>
+            </div>
+
+            <div class="buttons-section">
+                <button id="resetBtn">Reset</button>
+                <button id="submitBtn">Submit</button>
+            </div>
+        </div>
+
+        <!-- Result Area (Hidden initially) -->
+        <div id="resultArea" class="hidden">
+            <h2>Game Over!</h2>
+            <button id="restartButton">Restart</button>
+            <button id="quitFinalButton">Quit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

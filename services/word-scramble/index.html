@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Game - Word Scramble</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="game-title">📝 Language Game - Unscramble the Word</h1>
+        <div class="game-box">
+            <div class="timer" id="timer">⏳ Time: 120</div>
+            <div class="score" id="score">🏆 Score: 0</div>
+        </div>
+        <div class="word-box" id="word-box">
+            <p id="scrambled-word">Press Start to Begin!</p>
+        </div>
+        <input type="text" id="user-input" placeholder="Enter the correct word..." /><br>
+        <button id="check-btn">Check</button>
+        <button id="start-btn">Start Game</button>
+        <button id="quit-btn">Quit Game</button>
+    </div>
+
+    <!-- Audio Files -->
+    <audio id="correctSound" src="../../audio/correct.wav"></audio>
+    <audio id="incorrectSound" src="../../audio/wrong.wav"></audio>
+    <audio id="timeupSound" src="../../audio/timeup.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #4caf50;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 95%;
+}
+
+#pattern-display {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.pattern-box {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option {
+    padding: 20px 24px;
+    border: 2px solid #ccc;
+    background-color: #e0f7fa;
+    cursor: pointer;
+    font-size: 36px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    flex: 1 1 40%;
+    max-width: 150px;
+    box-sizing: border-box;
+}
+
+.option:hover {
+    background-color: #80deea;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.timer-bar {
+    height: 10px;
+    width: 100%;
+    background-color: green;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: width 0.5s ease;
+}
+
+/* ✅ Highlight Correct Option */
+.option.correct {
+    background-color: #c8e6c9;
+    border-color: #4caf50;
+}
+
+/* ❌ Highlight Wrong Option */
+.option.wrong {
+    background-color: #ffcdd2;
+    border-color: #f44336;
+}
+@media (max-width: 480px) {
+  h1 {
+      font-size: 24px;
+  }
+
+  #pattern-display {
+      font-size: 36px;
+  }
+
+  .pattern-box {
+      font-size: 24px;
+  }
+
+  .option {
+      font-size: 28px;
+      padding: 16px;
+      flex: 1 1 45%;
+      max-width: none;
+  }
+
+  button {
+      font-size: 16px;
+  }
+}

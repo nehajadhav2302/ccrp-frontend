@@ -1,0 +1,131 @@
+/* ✅ Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #f5f5f5; /* Light Background */
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* ✅ Section Title */
+.section-title {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 50px 0 20px;
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #2ecc71;
+    margin: 10px auto 40px;
+}
+
+/* ✅ Services Grid */
+.services-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    padding-bottom: 40px;
+}
+.services-box {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px 10px; /* Increased padding */
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center align content */
+}
+.services-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Icon Styles */
+.icon {
+    background-color: #2ecc71;
+    border-radius: 50%;
+    width: 60px; /* Slightly increased size */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    transition: background-color 0.3s ease;
+}
+.icon i {
+    color: #fff;
+    font-size: 1.4rem; /* Increased icon size slightly */
+}
+.services-box:hover .icon {
+    background-color: #27ae60;
+}
+
+/* ✅ Service Title */
+.services-title {
+    font-size: 1rem; /* Kept size smaller as requested */
+    color: #555;
+    margin-top: 5px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* ✅ Remove Underline from Links */
+a {
+    text-decoration: none;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .services-box {
+        padding: 15px;
+    }
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+    .services-title {
+        font-size: 0.9rem;
+    }
+}
+
+/* Back to Dashboard Button */
+.back-to-dashboard {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-back-to-dashboard {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back-to-dashboard:hover {
+    background-color: #c0392b;
+}

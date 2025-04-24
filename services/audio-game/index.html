@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonics Word Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🎤 Phonics Champion 🦉</h1>
+
+        <div id="instructions">
+            <p>🦉 Welcome to the Phonics Champion! 🎧</p>
+            <p>🎶 Listen to the word and choose the correct option.</p>
+            <p>✔️ Only one attempt per question!</p>
+            <p>🔓 Score 7 to unlock Medium, 8 for Hard!</p>
+            <p>🎉 Let’s begin!</p>
+            <div id="button-container">
+                <button id="start-button">Start Game</button>
+                <button id="quit-button">Quit</button>
+            </div>
+            
+        </div>
+
+        <div id="game-area" style="display: none;">
+            <p id="level-display">Level: Easy</p>
+            <p id="question-text">🎧 Listen to the word...</p>
+            <audio id="audio-player" controls></audio>
+            <div id="options-container"></div>
+            <p id="echo-message">🦉 I'm waiting...</p>
+            <button id="next-button" style="display: none;">Next ▶️</button>
+        </div>
+
+        <div id="game-over" style="display: none;">
+            <h2>🎉 Game Over! 🏆</h2>
+            <p id="final-score"></p>
+            <button id="restart-button">Restart</button>
+            <button id="quit-button-final">Quit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+body {
+    font-family: 'Lexend Deca', Arial, sans-serif;
+    background-color: #e8f5e9; /* Light Green */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.game-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 90%;
+}
+
+h1 {
+    color: #1b5e20;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#problem-container {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin: 20px 0;
+}
+
+input {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    margin: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #388e3c;
+    color: white;
+    transition: 0.3s;
+    width: 90%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #2e7d32;
+}
+
+#quit-button {
+    background-color: #d32f2f;
+}
+
+#quit-button:hover {
+    background-color: #b71c1c;
+}
+
+#time-left {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d84315;
+    margin-top: 15px;
+}
+
+#progress-bar-container {
+    width: 90%;
+    max-width: 300px;
+    background-color: #c8e6c9;
+    height: 12px;
+    border-radius: 6px;
+    margin: 15px auto;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #1b5e20;
+    width: 100%;
+    transition: width 1s;
+}
+
+#result {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #problem-container {
+        font-size: 24px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    #result {
+        font-size: 20px;
+    }
+
+    #time-left {
+        font-size: 18px;
+    }
+}

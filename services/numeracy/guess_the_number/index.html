@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔢 Guess the Number Game</h1>
+        <p class="instructions">
+            🎯 I have selected a random number between <b>1 and 100</b>.  
+            Try to guess it in the fewest attempts possible.  
+            Click <b>Start</b> to begin!
+        </p>
+
+        <button id="start-btn" class="btn">Start Game</button>
+
+        <div id="game-area" style="display: none;">
+            <p id="attempts">Attempts: 0</p>
+            <label for="guess-input">Enter your guess:</label>
+            <input type="number" id="guess-input" min="1" max="100">
+            <button id="submit-btn" class="btn">Submit</button>
+            <button id="quit-btn" class="btn quit-btn">Quit</button>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

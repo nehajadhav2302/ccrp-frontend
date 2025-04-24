@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Sequence Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Think & Repeat</h1>
+
+    <!-- Instructions Section -->
+    <div id="instructions">
+        <div class="instruction-card"><span class="emoji">👀</span> Memorize the pattern sequence carefully.</div>
+        <div class="instruction-card"><span class="emoji">⏳</span> You have 30 seconds to analyze the pattern.</div>
+        <div class="instruction-card"><span class="emoji">🧠</span> After the time is up, repeat the pattern correctly.</div>
+        <div class="instruction-card"><span class="emoji">🎯</span> The game starts easy and gets harder as you progress.</div>
+    </div>
+
+    <!-- Start Button -->
+    <button id="start-button">Start Game</button>
+
+    <!-- Game Section (Hidden Initially) -->
+    <div id="game-section" class="hidden">
+        <div class="game-container">
+            <div id="pattern-display"></div>
+            <div id="options-container"></div>
+            <p id="feedback"></p>
+        </div>
+    </div>
+
+    <!-- Buttons BELOW the game box -->
+    <div class="button-container">
+        <button id="restart-button" style="display: none;">Restart</button>
+        <button id="quit-button" onclick="location.href='../../index.html'">Quit</button>
+    </div>
+
+    <audio id="lose-sound" src="../../../audio/lose.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

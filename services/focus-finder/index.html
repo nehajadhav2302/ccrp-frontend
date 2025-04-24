@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 🎯 Game Title Section -->
+    <div class="header">
+        <h1>🎯 Focus Finder</h1>
+    </div>
+
+    <!-- ✅ Game Control Buttons -->
+    <div class="controls">
+        <button id="start-btn">Start Game</button>
+        <button id="quit-btn">Quit Game</button>
+    </div>
+
+    <!-- 🕹️ Game Info Bar -->
+    <div class="score-bar">
+        <div class="timer" id="timer">⏳ Time: 2:00</div>
+        <div class="score" id="score">🏆 Score: 0</div>
+    </div>
+
+    <!-- 🎮 Game Container for Circles -->
+    <div class="game-container" id="game-container"></div>
+
+    <!-- 🎧 Audio Files -->
+    <audio id="start-sound" src="../../audio/start.wav"></audio>
+    <audio id="timeup-sound" src="../../audio/timeup.wav"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

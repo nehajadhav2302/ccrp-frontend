@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #007acc;
+}
+
+#instructions {
+    text-align: left;
+    padding: 0 10px;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+    gap: 20px;
+    margin-top: 15px;
+    padding: 0 10px;
+}
+
+#next-button {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.game-container {
+    margin: 20px auto;
+    max-width: 500px;
+    width: 90%; /* Makes it responsive */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+}
+
+button:hover {
+    background-color: #005f99;
+}
+
+#echo-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #007acc;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#options-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Responsive: wrap options */
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.option-button {
+    background-color: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+    min-width: 100px;
+}
+
+.option-button:hover {
+    background-color: #ffaa00;
+}
+
+/* 🌐 Responsive Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .option-button,
+    button {
+        font-size: 14px;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .game-container {
+        padding: 15px;
+    }
+
+    #button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

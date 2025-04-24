@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think & Solve</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Think & Solve</h1>
+        <p id="instructions">Solve simple math problems!</p>
+
+        <div id="problem-container">
+            <p id="problem">Press Start to Begin</p>
+        </div>
+
+        <input type="number" id="user-answer" placeholder="Enter answer" disabled>
+        <button id="submit-button" disabled>Submit</button>
+
+        <p id="score">Score: <span id="score-count">0</span></p>
+        
+        <p id="time-left">⏳ Time Left: <span id="timer">120</span> sec</p>
+        
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <button id="start-button">Start Game</button>
+        <button id="quit-button">Quit</button>
+        <button id="restart-button" style="display: none;">Restart</button>
+
+        <p id="result"></p>
+
+        <!-- Audio for time-up only -->
+        <audio id="time-up-sound" src="../../../audio/timeup.wav"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

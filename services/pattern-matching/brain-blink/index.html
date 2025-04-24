@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattern Matching Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>🧠 Brain Blink 👀</h1>
+
+    <div id="pattern-display"></div>
+<div id="options-container"></div>
+<button id="start-button">Start Game</button>
+<button id="reset-button" style="display: none">Reset Game</button>
+<button id="quit-button">Quit Game</button>
+
+
+    <!-- ✅ Score, Lives, and Timer -->
+    <div id="score">🏆 Score: 0</div>
+    <div id="lives">❤️ Lives: 3</div>
+    <div id="timer">⏳ Time: 60s</div>
+    <div id="timer-bar" class="timer-bar"></div>
+  </div>
+
+  <!-- 🎧 Audio Elements -->
+  <audio id="correct-sound" src="../../../audio/correct.wav"></audio>
+<audio id="wrong-sound" src="../../../audio/wrong.wav"></audio>
+<audio id="win-sound" src="../../../audio/win.wav"></audio>
+<audio id="lose-sound" src="../../../audio/lose.wav"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

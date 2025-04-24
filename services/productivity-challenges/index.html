@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Pattern Play</h1>
+
+    <div id="instructions">
+        <h2>📜 How to Play</h2>
+        <p>🟢 Drag the correct option and drop it into the answer box.</p>
+        <p>🕒 You have <strong>120 seconds</strong> to complete the game.</p>
+        <p>❌ Once you place an answer, you can't change it.</p>
+        <p>🏆 Your score will be shown at the end.</p>
+    </div>
+
+    <div id="start-container">
+        <button id="start-button">Start Game</button>
+        <button id="quit-button" onclick="location.href='../index.html'">Quit</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div id="timer">Time Left: 120s</div>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <div id="answer-box" ondragover="allowDrop(event)" ondrop="drop(event)">Drop your answer here</div>
+    </div>
+
+    <div id="result-container" class="hidden">
+        <h2>🎯 Game Over!</h2>
+        <p id="score"></p>
+        <button id="restart-button">Restart</button>
+        <button id="quit-button-end" onclick="location.href='../index.html'">Quit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

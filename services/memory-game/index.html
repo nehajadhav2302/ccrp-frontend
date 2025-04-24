@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Master</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Memory Master</h1>
+    <p>Flip the cards to find matching pairs. Good luck!</p>
+    <div class="memory-game">
+        <!-- Cards will be generated dynamically -->
+    </div>
+    <div class="button-container">
+        <button id="reset-button" aria-label="Reset the game">Reset</button>
+        <button id="quit-button">Exit</button>
+    </div>
+    <audio id="flip-sound" src="../../audio/Flip.mp3" preload="auto"></audio>
+    <audio id="match-sound" src="../../audio/win.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="../../audio/Flip.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
