@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4c75af;
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+}
+
+#features {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap */
+    gap: 2em; /* Space between each feature */
+    justify-content: center; /* Center the content */
+}
+
+.feature {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 2em);  /* Ensure that each feature takes 50% of the container width */
+    padding: 2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.feature:hover {
+    background-color: #e0f7fa;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.feature h3 {
+    color: #4CAF50;
+    margin-bottom: 0.5em;
+}
+
+.feature p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .feature {
+        flex: 1 1 100%; /* Stack features vertically on smaller screens */
+    }
+}
