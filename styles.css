@@ -1,0 +1,560 @@
+/* styles.css */
+
+/* Gradient background for the entire page */
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+      /* background: linear-gradient(to bottom, #000033, #000000); */
+    /* overflow: hidden; */
+  }
+
+  .gradient-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #000000, #001f33);
+      z-index: -1;
+  }
+
+  /* Landing container for background and image */
+  .landing-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+  }
+  .poppins-text {
+      color: white;
+      font-family: "Ubuntu";
+      font-size: 3rem;
+      line-height: 1.5;
+  }
+  .landingtext{
+    width: 50%;
+    height: 50%;
+    font-size: 50px;
+    display: inline-block;
+    padding-left: 100px;
+    padding-top: 100px;
+  }
+
+  /* Main frame image */
+  .main-frame {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%; /* Adjust the width of the main frame */
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .main-frame img {
+      max-width: 90%; /* Ensure the image fits within the container */
+      max-height: 90%; /* Ensure the image fits within the container */
+      /* padding-right: 200px; */
+      opacity: 0; /* Start with opacity 0 (fully transparent) */
+      animation-name: fadeIn;
+      animation-duration: 3s; /* Adjust the duration as needed */
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;  /* Infinite loop */
+  }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with opacity 0 (fully transparent) */
+    }
+    100% {
+        opacity: 1; /* End with opacity 1 (fully visible) */
+    }
+}
+
+
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 30px 10%;
+      background-color: black;
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
+    .webname{
+      font: 200;
+      color: white;
+      font-family: "Montserrat", sans-serif
+
+    }
+
+     header img{
+      height:5vh;
+      border-radius: 20px;
+    }
+
+    .nav__links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      color: #edf0f1;
+      text-decoration: none;
+    }
+
+    .nav__links li {
+      padding: 0px 20px;
+    }
+
+    .nav__links li a {
+      transition: all 0.3s ease 0s;
+    }
+
+    .nav__links li a:hover {
+      color:purple;
+    }
+
+    .cta {
+      margin-left: 20px;
+      padding: 9px 25px;
+      background-color: purple;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+
+    .cta:hover {
+      background-color: purple;
+    }
+
+    /* Mobile Nav */
+
+    .menu {
+      display: none;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: all 0.5s ease 0s;
+    }
+
+    .overlay--active {
+      width: 100%;
+    }
+
+    .overlay__content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay a {
+      padding: 15px;
+      font-size: 36px;
+      display: block;
+      transition: all 0.3s ease 0s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color:purple;
+    }
+    .overlay .close {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+      color: #edf0f1;
+      cursor: pointer;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px;
+      }
+      .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      .nav__links,
+      .cta {
+        display: none;
+      }
+      .menu {
+        display: initial;
+      }
+    }
+
+
+
+
+  /* carousel */
+    .container {
+      max-width: 1533px;
+      margin-top: 0;
+      background: linear-gradient(to bottom, #000000, #003333);
+      width: 100%;
+    }
+    .slider-wrapper {
+      position: relative;
+    }
+    .slider-wrapper .slide-button {
+      position: absolute;
+      top: 50%;
+      outline: none;
+      border: none;
+      height: 50px;
+      width: 50px;
+      z-index: 5;
+      color: #fff;
+      display: flex;
+      cursor: pointer;
+      font-size: 2.2rem;
+      background: #000;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .slider-wrapper .slide-button:hover {
+      background: #404040;
+    }
+    .slider-wrapper .slide-button#prev-slide {
+      left: -10px;
+      display: none;
+    }
+    .slider-wrapper .slide-button#next-slide {
+      right: 0px;
+    }
+    .slider-wrapper .image-list {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 18px;
+      font-size: 0;
+      list-style: none;
+      margin-bottom: 30px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .slider-wrapper .image-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slider-wrapper .image-list .image-item {
+      width: 325px;
+      height: 400px;
+      object-fit: cover;
+    }
+    .container .slider-scrollbar {
+      height: 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .slider-scrollbar .scrollbar-track {
+      background: #ccc;
+      width: 100%;
+      height: 2px;
+      display: flex;
+      align-items: center;
+      border-radius: 4px;
+      position: relative;
+    }
+    .slider-scrollbar:hover .scrollbar-track {
+      height: 4px;
+    }
+    .slider-scrollbar .scrollbar-thumb {
+      position: absolute;
+      background: #000;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      height: 100%;
+      cursor: grab;
+      border-radius: inherit;
+    }
+
+    .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+  /* Styles for mobile and tablets */
+  @media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+      display: none !important;
+    }
+    .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+    .slider-wrapper .image-list .image-item {
+      width: 280px;
+      height: 380px;
+    }
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+  }
+
+    .image-item {
+        /* Existing styles for image items */
+
+        /* Add a blur effect on hover */
+        transition: filter 0.3s ease;
+    }
+
+    .image-item:hover {
+        filter: blur(5px); /* Adjust the blur amount as needed */
+    }
+
+    .image-description {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        white-space: nowrap;
+    }
+
+    .image-item:hover .image-description {
+        display: block;
+    }
+
+
+
+
+    /* features-section */
+
+    #features{
+      padding: 7% 15%;
+      background-color: #fff;
+      position: relative;
+      background: linear-gradient(to bottom, #000033, #000000);
+
+    }
+    .feature-box{
+      text-align: center;
+      padding: 5%;
+    }
+    p{
+      color: #8f8f8f
+    }
+    .icon{
+      color: #ef8172;
+      margin-bottom: 1rem;
+    }
+    .icon:hover{
+      color:#ff4c68;
+      font-size: 40px;
+    }
+    .row{
+      display: flex;
+    }
+
+
+/* quotes */
+.skills{
+    background: linear-gradient(to top, #000033, #000000);
+}
+.skill-row{
+  width: 55%;
+  margin: 0px auto 0px auto;
+  text-align: left;
+  height: 15rem;
+}
+
+.quote1_pic{
+  width: 134px;
+  float: left;
+  /* padding-right: 30px; */
+  margin-right: 59px;
+margin-top: 20px;
+  border-radius: 115px;
+}
+
+.quote2_pic{
+  width: 134px;
+  float: right;
+  /* padding-right: 30px; */
+  margin-top: 10px;
+  margin-left: 59px;
+  border-radius: 115px;
+}
+
+.scientist-name {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #336699; /* Change the color as desired */
+            margin-top: 50px
+
+}
+
+/* footer */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+} */
+
+.container1{
+	max-width: 1170px;
+	margin:auto;
+}
+.row1{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background: #0b0f17;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 20%;
+   padding: 0 15px;
+}
+.logo{
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+ }
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+  margin-left: 10em;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+  margin-left: 9em;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+  margin-left: 11.5em;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+/* Add these styles for the horizontal line and copyright section */
+.footer-line {
+    border-top: 1px solid #ffffff;
+    margin: 20px 0;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #bbbbbb;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Add styles for the logo */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Rest of your existing CSS */
+
+/* Rest of your existing CSS */
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
