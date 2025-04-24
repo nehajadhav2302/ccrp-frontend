@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Cognitive Retraining Program</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Panel - Cognitive Retraining Program</h2>
+        <div class="tab-container">
+            <button onclick="showLogin()" id="login-tab" class="active">Login</button>
+            <!-- <button onclick="showRegister()" id="register-tab">Register</button> -->
+        </div>
+        
+        <!-- Admin Login Form -->
+        <form id="login-form" class="form" onsubmit="handleLogin(event)">
+            <h3>Login as Admin</h3>
+            <label for="admin-username">Username:</label>
+            <input type="text" id="admin-username" name="admin-username" required>
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" name="admin-password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Admin Register Form -->
+        <!-- <form id="register-form" class="form hidden" onsubmit="handleRegister(event)">
+            <h3>Register as New Admin</h3>
+            <label for="reg-admin-username">Username:</label>
+            <input type="text" id="reg-admin-username" name="reg-admin-username" required>
+            <label for="reg-admin-email">Email:</label>
+            <input type="email" id="reg-admin-email" name="reg-admin-email" required>
+            <label for="reg-admin-password">Password:</label>
+            <input type="password" id="reg-admin-password" name="reg-admin-password" required>
+            <button type="submit">Register</button>
+        </form> -->
+
+        <p><a href="../User/index.html">Switch to User Login</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

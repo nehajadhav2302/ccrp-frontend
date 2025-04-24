@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">🛠 Admin Panel</h2>
+      <nav>
+        <a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="../index.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="topbar">
+        <h1>Welcome, Admin 👋</h1>
+        <p>Here’s your system overview and user insights.</p>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="summary-cards">
+        <div class="card"><i class="fas fa-user"></i><h3>Total Users</h3><p id="userCount">-</p></div>
+        <div class="card"><i class="fas fa-gamepad"></i><h3>Total Games Played</h3><p id="gamesPlayed">-</p></div>
+        <div class="card"><i class="fas fa-star"></i><h3>Top Score</h3><p id="topScore">-</p></div>
+        <div class="card"><i class="fas fa-cogs"></i><h3>Most Played Game</h3><p id="mostPlayedGame">-</p></div>
+      </section>
+
+      <!-- Charts -->
+      <section class="charts-section">
+        <h2>📊 Analytics</h2>
+      
+        <div class="chart-box">
+          <h3>Attempts Per Game</h3>
+          <canvas id="gameDistributionChart" width="400" height="200"></canvas>
+        </div>
+      
+        <div class="chart-box">
+          <h3>Average Score Per Game</h3>
+          <canvas id="avgScorePerGameChart" width="400" height="200"></canvas>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
